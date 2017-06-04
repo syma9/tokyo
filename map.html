@@ -1,0 +1,129 @@
+<html>
+<head>
+    <title>Tokyo Trip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- All the stuff you need to install from Leaflet -->
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <script src="leaflet/leaflet.js"></script>
+    <script type='text/javascript' src='js/a.jquery.min.js'></script>
+	<link rel="stylesheet" href="leaflet/screen.css" />
+
+
+
+
+	<style>#map { width: 99%; height: 1000px; }
+	.info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; }
+	.info h4 { margin: 0 0 5px; color: #777; }
+	.legend { text-align: left; line-height: 18px; color: #555; }
+	.legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
+	</style>
+
+
+
+</head>
+<body style="margin:0; padding:0;">
+    <!-- The <div> where we're put the map -->
+    <div id="map" style="width: 99%; height: 99%"></div>
+    <script type="text/javascript">
+
+
+
+
+
+
+        // Initialize the map object
+		var map = L.map('map').setView([35.6786959,139.743594], 13);
+
+			L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 20,
+		minZoom: 12,
+		id: 'mapbox.light'
+		}).addTo(map);
+
+    var food = L.icon({
+        iconUrl: 'icon/food.png',
+        iconSize: [30, 30], // size of the icon
+        });
+
+
+    var play = L.icon({
+        iconUrl: 'icon/play.png',
+        iconSize: [30, 30], // size of the icon
+        });
+
+
+    var snoopy = L.icon({
+        iconUrl: 'icon/snoopy.png',
+        iconSize: [40, 40], // size of the icon
+        });
+
+
+
+    var sn = L.marker([35.659798, 139.734033], {icon: snoopy}).bindPopup('<p>Snoopy Museum</p><p><img src="http://dc-cdn.s3-ap-southeast-1.amazonaws.com/dc-Cover-2uibf5n76684t0415ej4r0g4b3-20160425185533.Medi.jpeg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Snoopy+Museum/@35.6547085,139.7369084,14z/data=!4m13!1m7!3m6!1s0x605d1b87f02e57e7:0x2e01618b22571b89!2sTokyo,+Japan!3b1!8m2!3d35.6894875!4d139.6917064!3m4!1s0x0:0x7c0f44073a3c60ce!8m2!3d35.6596673!4d139.7340345">Link</a></p>', {minWidth:180}).addTo(map);
+
+    var sn = L.marker([35.667657, 139.706501], {icon: snoopy}).bindPopup('<p>Snoopy Shop Harajuku</p><p><img src="http://japan.com/wp-content/uploads/1-27-420x225.png" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Snoopy+Town/@35.66507,139.6966891,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzXCsDM5JzM1LjEiTiAxMznCsDQ0JzAyLjUiRQ!3b1!8m2!3d35.659752!4d139.73403!3m4!1s0x0:0xa1b7a4b7d8a0c1e8!8m2!3d35.6676562!4d139.7065043">Link</a></p>', {minWidth:180}).addTo(map);
+
+
+    var eat = L.marker([35.671665, 139.761364], {icon: food}).bindPopup('<p>Sushi Ya (Aburi)</p><p><img src="https://res.cloudinary.com/hstcxjula/image/upload/b_black,c_pad,f_auto,fl_keep_iptc,h_387,w_580/v1470117606/zx57i2vwifeujavljur6.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Sushi+Ya/@35.6547085,139.7369084,14z/data=!4m13!1m7!3m6!1s0x605d1b87f02e57e7:0x2e01618b22571b89!2sTokyo,+Japan!3b1!8m2!3d35.6894875!4d139.6917064!3m4!1s0x0:0xf3fc4f649a52488d!8m2!3d35.6716655!4d139.7611946">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var eat = L.marker([35.688183, 139.711506], {icon: food}).bindPopup('<p>Hakata Issuitei (Ramen)</p><p><img src="https://media.timeout.com/images/103662200/630/472/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/%E5%8D%9A%E5%A4%9A%E4%B8%80%E7%91%9E%E4%BA%AD+HAKATA+ISSUITEI/@35.6875029,139.701807,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzXCsDM5JzM1LjEiTiAxMznCsDQ0JzAyLjUiRQ!3b1!8m2!3d35.659752!4d139.73403!3m4!1s0x0:0xfd25b36bcbf8f47e!8m2!3d35.6883045!4d139.7114584">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var eat = L.marker([35.651265, 139.722832], {icon: food}).bindPopup('<p>Les Grands Arbres</p><p><img src="https://media.timeout.com/images/103402538/630/472/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Les+Grands+Arbres/@35.6496779,139.7139488,15z/data=!4m12!1m6!3m5!1s0x60188ca39a3def85:0xa1b7a4b7d8a0c1e8!2sSnoopy+Town!8m2!3d35.6676572!4d139.706503!3m4!1s0x0:0xb28f3af5996ce57e!8m2!3d35.6513639!4d139.7228149">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var eat = L.marker([35.651265, 139.722832], {icon: food}).bindPopup('<p>Murugi</p><p><img src="https://media.timeout.com/images/102553669/750/422/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Murugi/@35.6589762,139.6943765,17z">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var eat = L.marker([35.657821, 139.704996], {icon: food}).bindPopup('<p>Ishinohana</p><p><img src="https://media.timeout.com/images/102560979/750/422/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Bar+石の華/@35.657825,139.7027858,17z">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var eat = L.marker([35.648233, 139.710649], {icon: food}).bindPopup('<p>Ebisu Yokocho</p><p><img src="http://www.yoninja.com/sites/default/files/nfiles/user_sub_photos/6107/17327875155c544893db5k.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Ebisu+Yokocho/@35.6482637,139.7084493,17z">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var eat = L.marker([35.659863, 139.701388], {icon: food}).bindPopup('<p>Nonbei Yokocho</p><p><img src="http://68.media.tumblr.com/97946f0f5b7e2d05675324a986928101/tumblr_nv8x16R7Of1uxiskyo1_1280.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Shibuya+Nonbei+Alley/@35.6598672,139.6991997,17z">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var eat = L.marker([35.665028, 139.694120], {icon: food}).bindPopup('<p>Shibuya Cheese STAND</p><p><img src="https://media.timeout.com/images/102559582/630/472/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/SHIBUYA+CHEESE+STAND+チーズスタンド/@35.6650493,139.6918993,17z">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var eat = L.marker([35.656278, 139.734895], {icon: food}).bindPopup('<p>Asabu Karinto</p><p><img src="https://media.timeout.com/images/102558461/750/422/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/search?q=asabu+karinto&oq=asa&aqs=chrome.2.69i57j69i59l2j0l3.2589j0j4&sourceid=chrome&ie=UTF-8#q=azabu+karinto&rflfq=1&rlha=0&rllag=35668945,139751875,2093&tbm=lcl&rldimm=7236027945421442947&tbs=lrf:!2m1!1e3!3sEAE,lf:1,lf_ui:3&rlfi=hd:;si:;mv:!1m3!1d13978.222992927249!2d139.7518757!3d35.6689454!2m3!1f0!2f0!3f0!3m2!1i443!2i414!4f13.1;tbs:lrf:!2m1!1e3!3sEAE,lf:1,lf_ui:3">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var eat = L.marker([35.663615, 139.732659], {icon: food}).bindPopup('<p>Afuri (Chicken Ramen)</p><p><img src="http://chubbyhubby.net/wp-content/uploads/2012/12/afuri1.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/AFURI+六本木交差点/@35.6636283,139.7304593,17z">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var eat = L.marker([35.691238, 139.708530], {icon: food}).bindPopup('<p>Tsukemen Gachi (Ramen)</p><p><img src="https://media.timeout.com/images/102811610/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/2Chome+Tsukemen+Gachi/@35.69126,139.7063413,17z">Link</a></p>', {minWidth:150}).addTo(map);
+
+
+
+
+
+
+    var pl = L.marker([35.726184, 139.716692], {icon: play}).bindPopup('<p>Art Olympia Exhibition</p><p><img src="http://www.graphiccompetitions.com/contest_image.php?thumbnail=3976" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Toshima+Ward+Office/@35.7261974,139.7144608,17z/data=!4m12!1m6!3m5!1s0x60188d6eab47fe49:0x3b9428a70a1ead3e!2sToshima+Ward+Office!8m2!3d35.7261931!4d139.7166495!3m4!1s0x60188d6eab47fe49:0x3b9428a70a1ead3e!8m2!3d35.7261931!4d139.7166495">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var pl = L.marker([35.665402, 139.770782], {icon: play}).bindPopup('<p>Tsukiji Fish Market</p><p><img src="http://whereandwander.com/wp-content/uploads/2016/04/Tsukiji-Fish-Market-Buyers-Auction.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Tsukiji+Market/@35.6650006,139.7654179,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzXCsDM5JzM1LjEiTiAxMznCsDQ0JzAyLjUiRQ!3b1!8m2!3d35.659752!4d139.73403!3m4!1s0x0:0x57c9eadb7b62ef7f!8m2!3d35.6654902!4d139.7706628">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var pl = L.marker([35.693768, 139.704596], {icon: play}).bindPopup('<p>Golden Gai</p><p><img src="https://suq4y2a28lmqho672fl5ldv7-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/Golden-Gai-5.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Golden+Gai/@35.6875029,139.701807,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzXCsDM5JzM1LjEiTiAxMznCsDQ0JzAyLjUiRQ!3b1!8m2!3d35.659752!4d139.73403!3m4!1s0x0:0x71a5c0e1150c1a8f!8m2!3d35.6937767!4d139.7046134!6m1!1e1">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var pl = L.marker([35.668462, 139.705471], {icon: play}).bindPopup('<p>Omotesando</p><p><img src="http://darkroom.baltimoresun.com/wp-content/uploads/2012/07/REU-JAPAN-ECONOMY_DEFLATION.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Omotesando/@35.6668885,139.706919,17z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzXCsDM5JzM1LjEiTiAxMznCsDQ0JzAyLjUiRQ!3b1!8m2!3d35.659752!4d139.73403!3m4!1s0x0:0xbddfc93882ef14a0!8m2!3d35.6684499!4d139.7053999">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var pl = L.marker([35.659887, 139.700844], {icon: play}).bindPopup('<p>Shibuya Crossing</p><p><img src="http://static.thousandwonders.net/Shibuya.Crossing.original.10925.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/%E3%83%8F%E3%83%81%E5%85%AC%E5%89%8D%E3%81%AE%E3%81%8F%E3%81%99%E3%82%8A%E5%B1%8B%E3%81%95%E3%82%93+%E7%A5%9E%E5%8D%97%E5%BA%97+%E4%B8%89%E5%8D%83%E9%87%8C%E8%96%AC%E5%93%81/@35.6583742,139.6995247,17z/data=!3m1!5s0x60188ca8027011b9:0xaf0e3821734cad50!4m13!1m7!3m6!1s0x60188cb2eb3108d1:0xf11cd9b2395b6677!2sShibuya,+Tokyo,+Japan!3b1!8m2!3d35.6617773!4d139.7040506!3m4!1s0x0:0xd475456ddd27e1bc!8m2!3d35.6596771!4d139.7008811">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var pl = L.marker([35.665144, 139.726717], {icon: play}).bindPopup('<p>National Art Centre</p><p><img src="http://farm1.staticflickr.com/165/382682388_3615382293.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/The+National+Art+Center,+Tokyo/@35.6620179,139.7215088,14z/data=!4m12!1m6!3m5!1s0x60188bef147eaaab:0xf3fc4f649a52488d!2sSushi+Ya!8m2!3d35.6716669!4d139.7611948!3m4!1s0x0:0x4025f2eaf2aa9d18!8m2!3d35.6652897!4d139.7263741">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var pl = L.marker([35.660294, 139.729045], {icon: play}).bindPopup('<p>Roppongi Hills (Mori Art Museum)</p><p><img src="https://s-media-cache-ak0.pinimg.com/originals/15/9e/d1/159ed122efa147612327645f5ef88fa4.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Mori+Art+Museum/@35.6626783,139.7275542,17z/data=!3m1!5s0x60188b770968fbdd:0xade6fa826b6e383d!4m12!1m6!3m5!1s0x60188b7bf6ceeb3f:0x4025f2eaf2aa9d18!2sThe+National+Art+Center,+Tokyo!8m2!3d35.665289!4d139.726374!3m4!1s0x0:0xff33d131dc8d6e9!8m2!3d35.6603179!4d139.72899">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var pl = L.marker([35.690606, 139.754687], {icon: play}).bindPopup('<p>National Museum of Modern Art</p><p><img src="http://www.momat.go.jp/english/wp-content/uploads/2014/11/newsd_1698_11.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/National+Museum+of+Modern+Art,+Tokyo/@35.6878354,139.7520266,15z/data=!4m12!1m6!3m5!1s0x60188b7bf6ceeb3f:0x4025f2eaf2aa9d18!2sThe+National+Art+Center,+Tokyo!8m2!3d35.665289!4d139.726374!3m4!1s0x0:0x6667d99d5f4afe2a!8m2!3d35.6905439!4d139.7546929">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var pl = L.marker([35.681159, 139.765155], {icon: play}).bindPopup('<p>Tokyo Station</p><p><img src="https://media.timeout.com/images/102500155/750/422/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/search/tokyo+station/@35.6794724,139.7665824,17z/data=!3m1!4b1">Link</a></p>', {minWidth:180}).addTo(map);
+
+    var pl = L.marker([35.685111, 139.710470], {icon: play}).bindPopup('<p>Shinjuku Gyoen National Garden</p><p><img src="http://img.timeinc.net/time/photoessays/2009/tokyo/tokyo_shinjuku.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Shinjuku+Gyoen+National+Garden/@35.6851763,139.707863,17z/data=!3m1!4b1!4m5!3m4!1s0x60188cc21b93233f:0x6a1eb1b5a117f287!8m2!3d35.6851763!4d139.7100517">Link</a></p>', {minWidth:150}).addTo(map);
+
+
+    var pl = L.marker([35.674606, 139.739839], {icon: play}).bindPopup('<p>Hie Shrine</p><p><img src="https://bluebalu.files.wordpress.com/2015/11/tokyo-hie-shrine-2015-4.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Hie+Shrine/@35.6747103,139.737367,17z/data=!3m1!4b1!4m5!3m4!1s0x601fa6c4e4114317:0xef431afda2747c8f!8m2!3d35.6747103!4d139.7395557">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var pl = L.marker([35.676411, 139.699347], {icon: play}).bindPopup('<p>Meiji Shrine</p><p><img src="http://www.thetraveltester.com/wp-content/uploads/meiji-shrine-tokyo-japan-770x512.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Meiji+Jingu/@35.6763976,139.6971372,17z/data=!3m1!4b1!4m5!3m4!1s0x60188cb79a4c26e5:0x8fca893849103f73!8m2!3d35.6763976!4d139.6993259">Link</a></p>', {minWidth:150}).addTo(map);
+
+    var pl = L.marker([35.636563, 139.763144], {icon: play}).bindPopup('<p>Rainbow Bridge</p><p><img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Rainbow_colored_Rainbow_Bridge_at_night.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Rainbow+Bridge/@35.6365639,139.7609556,17z/data=!3m1!4b1!4m5!3m4!1s0x60188a309545656d:0x20fcbb1fa37a99af!8m2!3d35.6365639!4d139.7631443">Link</a></p>', {minWidth:150}).addTo(map);
+    var pl = L.marker([35.604349, 139.646185], {icon: play}).bindPopup('<p>Todoroki Valley</p><p><img src="http://cdn.c.photoshelter.com/img-get/I0000H9eDMFoKE9s/s/860/860/Japan-Todoroki-valley-1-Todo-6936.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Todorikikeikoku+Park/@35.606055,139.6448771,17z/data=!4m8!1m2!2m1!1sTodoroki+Valley!3m4!1s0x6018f45405495069:0x71ab45cd45edb2b9!8m2!3d35.6043497!4d139.6461856">Link</a></p>', {minWidth:150}).addTo(map);
+    var pl = L.marker([35.695415, 139.702054], {icon: play}).bindPopup('<p>Toho Cinemas Shinjuku</p><p><img src="https://media-cdn.tripadvisor.com/media/photo-s/0a/ac/d4/e9/godzilla-en-los-cines.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/TOHO+Cinemas+Shinjuku/@35.6954196,139.6998658,17z/data=!3m2!4b1!5s0x60188cd8241c6fb7:0xb49c0a495cc48344!4m5!3m4!1s0x60188cd82b4cf2ff:0x4e180e7a40fbffe8!8m2!3d35.6954153!4d139.7020545">Link</a></p>', {minWidth:150}).addTo(map);
+    var pl = L.marker([35.7238373,139.7644095], {icon: play}).bindPopup('<p>Yanaka Bike Rentals</p><p><img src="https://www.ana-cooljapan.com/columns/wp-content/uploads/2014/12/Blog07-Ben-Davis-02.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/search/Tokyo+Bike+Rentals+Yanaka/@35.7238373,139.7644095,16z">Link</a></p>', {minWidth:150}).addTo(map);
+    var pl = L.marker([35.693387, 139.703756], {icon: play}).bindPopup('<p>Utahiroba Karaoke</p><p><img src="https://img-en.kikou.io/media/1/2301/size640_HHnhliJEG8WM1NRHBB__0g.png" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/歌広場+新宿区役所前店/@35.6923806,139.7003125,17z">Link</a></p>', {minWidth:150}).addTo(map);
+
+
+
+    </script>
+</body>
+</html>
