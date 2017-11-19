@@ -8,9 +8,6 @@
     <script type='text/javascript' src='js/a.jquery.min.js'></script>
 	<link rel="stylesheet" href="leaflet/screen.css" />
 
-
-
-
 	<style>#map { width: 99%; height: 1000px; }
 	.info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; }
 	.info h4 { margin: 0 0 5px; color: #777; }
@@ -18,18 +15,11 @@
 	.legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
 	</style>
 
-
-
 </head>
 <body style="margin:0; padding:0;">
     <!-- The <div> where we're put the map -->
     <div id="map" style="width: 99%; height: 99%"></div>
     <script type="text/javascript">
-
-
-
-
-
 
         // Initialize the map object
 		var map = L.map('map').setView([35.6786959,139.743594], 13);
@@ -45,30 +35,21 @@
         iconSize: [30, 30], // size of the icon
         });
 
-
     var play = L.icon({
         iconUrl: 'icon/play.png',
         iconSize: [30, 30], // size of the icon
         });
-
 
     var snoopy = L.icon({
         iconUrl: 'icon/snoopy.png',
         iconSize: [40, 40], // size of the icon
         });
 
-
-
-    var sn = L.marker([35.659798, 139.734033], {icon: snoopy}).bindPopup('<p>Snoopy Museum</p><p><img src="http://dc-cdn.s3-ap-southeast-1.amazonaws.com/dc-Cover-2uibf5n76684t0415ej4r0g4b3-20160425185533.Medi.jpeg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Snoopy+Museum/@35.6547085,139.7369084,14z/data=!4m13!1m7!3m6!1s0x605d1b87f02e57e7:0x2e01618b22571b89!2sTokyo,+Japan!3b1!8m2!3d35.6894875!4d139.6917064!3m4!1s0x0:0x7c0f44073a3c60ce!8m2!3d35.6596673!4d139.7340345">Link</a></p>', {minWidth:180}).addTo(map);
-
-    var sn = L.marker([35.667657, 139.706501], {icon: snoopy}).bindPopup('<p>Snoopy Shop Harajuku</p><p><img src="http://japan.com/wp-content/uploads/1-27-420x225.png" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Snoopy+Town/@35.66507,139.6966891,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzXCsDM5JzM1LjEiTiAxMznCsDQ0JzAyLjUiRQ!3b1!8m2!3d35.659752!4d139.73403!3m4!1s0x0:0xa1b7a4b7d8a0c1e8!8m2!3d35.6676562!4d139.7065043">Link</a></p>', {minWidth:180}).addTo(map);
-    var sn = L.marker([35.648629, 139.694492], {icon: snoopy}).bindPopup('<p>Snoopy Cafe Shibuya</p><p><img src="https://media.timeout.com/images/102886431/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/PEANUTS+Cafe+%2F+ピーナッツカフェ/@35.6503207,139.6906512,15z">Link</a></p>', {minWidth:180}).addTo(map);
-
-
+    var sn = L.marker([35.659798, 139.734033], {icon: play}).bindPopup('<p>Snoopy Museum</p><p><img src="http://dc-cdn.s3-ap-southeast-1.amazonaws.com/dc-Cover-2uibf5n76684t0415ej4r0g4b3-20160425185533.Medi.jpeg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Snoopy+Museum/@35.6547085,139.7369084,14z/data=!4m13!1m7!3m6!1s0x605d1b87f02e57e7:0x2e01618b22571b89!2sTokyo,+Japan!3b1!8m2!3d35.6894875!4d139.6917064!3m4!1s0x0:0x7c0f44073a3c60ce!8m2!3d35.6596673!4d139.7340345">Link</a></p>', {minWidth:180}).addTo(map);
+    var sn = L.marker([35.667657, 139.706501], {icon: play}).bindPopup('<p>Snoopy Shop Harajuku</p><p><img src="http://japan.com/wp-content/uploads/1-27-420x225.png" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Snoopy+Town/@35.66507,139.6966891,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzXCsDM5JzM1LjEiTiAxMznCsDQ0JzAyLjUiRQ!3b1!8m2!3d35.659752!4d139.73403!3m4!1s0x0:0xa1b7a4b7d8a0c1e8!8m2!3d35.6676562!4d139.7065043">Link</a></p>', {minWidth:180}).addTo(map);
+    var sn = L.marker([35.648629, 139.694492], {icon: play}).bindPopup('<p>Snoopy Cafe Shibuya</p><p><img src="https://media.timeout.com/images/102886431/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/PEANUTS+Cafe+%2F+ピーナッツカフェ/@35.6503207,139.6906512,15z">Link</a></p>', {minWidth:180}).addTo(map);
     var eat = L.marker([35.671665, 139.761364], {icon: food}).bindPopup('<p>Sushi Ya (Aburi)</p><p><img src="https://res.cloudinary.com/hstcxjula/image/upload/b_black,c_pad,f_auto,fl_keep_iptc,h_387,w_580/v1470117606/zx57i2vwifeujavljur6.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Sushi+Ya/@35.6547085,139.7369084,14z/data=!4m13!1m7!3m6!1s0x605d1b87f02e57e7:0x2e01618b22571b89!2sTokyo,+Japan!3b1!8m2!3d35.6894875!4d139.6917064!3m4!1s0x0:0xf3fc4f649a52488d!8m2!3d35.6716655!4d139.7611946">Link</a></p>', {minWidth:150}).addTo(map);
-
     var eat = L.marker([35.688183, 139.711506], {icon: food}).bindPopup('<p>Hakata Issuitei (Ramen)</p><p><img src="https://media.timeout.com/images/103662200/630/472/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/%E5%8D%9A%E5%A4%9A%E4%B8%80%E7%91%9E%E4%BA%AD+HAKATA+ISSUITEI/@35.6875029,139.701807,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzXCsDM5JzM1LjEiTiAxMznCsDQ0JzAyLjUiRQ!3b1!8m2!3d35.659752!4d139.73403!3m4!1s0x0:0xfd25b36bcbf8f47e!8m2!3d35.6883045!4d139.7114584">Link</a></p>', {minWidth:150}).addTo(map);
-
     var eat = L.marker([35.651265, 139.722832], {icon: food}).bindPopup('<p>Les Grands Arbres</p><p><img src="https://media.timeout.com/images/103402538/630/472/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Les+Grands+Arbres/@35.6496779,139.7139488,15z/data=!4m12!1m6!3m5!1s0x60188ca39a3def85:0xa1b7a4b7d8a0c1e8!2sSnoopy+Town!8m2!3d35.6676572!4d139.706503!3m4!1s0x0:0xb28f3af5996ce57e!8m2!3d35.6513639!4d139.7228149">Link</a></p>', {minWidth:150}).addTo(map);
 
     var eat = L.marker([35.651265, 139.722832], {icon: food}).bindPopup('<p>Murugi</p><p><img src="https://media.timeout.com/images/102553669/750/422/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Murugi/@35.6589762,139.6943765,17z">Link</a></p>', {minWidth:180}).addTo(map);
