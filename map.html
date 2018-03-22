@@ -22,7 +22,11 @@
     <script type="text/javascript">
 
         // Initialize the map object
+<<<<<<< HEAD
 		var map = L.map('map').setView([34.6851,135.8050], 13);
+=======
+		var map = L.map('map').setView([34.6851,135.8350], 15);
+>>>>>>> gh-pages
 
 			L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 20,
@@ -45,8 +49,42 @@
         iconSize: [40, 40], // size of the icon
         });
 
+    var train = L.icon({
+        iconUrl: 'icon/train.png',
+        iconSize: [40, 40], // size of the icon
+        });
+
+    var bike = L.icon({
+        iconUrl: 'icon/bike.png',
+        iconSize: [40, 40], // size of the icon
+        });
+
+
+
+    var sn = L.marker([34.685047, 135.843012], {icon: play}).bindPopup('<p>Nara Park 奈良公园</p><p><img src="http://jrrny.com/wp-content/uploads/journeys/Mimz/41a42981615f85823e4439b331aa2bc0.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/Nara+Park/@34.685047,135.843012,15z/data=!4m5!3m4!1s0x0:0xf96cacf357447456!8m2!3d34.685047!4d135.843012">Link</a></p>', {minWidth:180}).addTo(map);
+    var sn = L.marker([34.6889851, 135.8398158], {icon: play}).bindPopup('<p>Todaiji Temple 东大寺</p><p><img src="https://www.japan-guide.com/g16/4100_top.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/Tōdai-ji/@34.6889895,135.8376271,17z/">Link</a></p>', {minWidth:180}).addTo(map);
+    var sn = L.marker([34.6855566, 135.8372106], {icon: play}).bindPopup('<p>Isuien 依水園</p><p><img src="https://media-cdn.tripadvisor.com/media/photo-s/03/3a/16/75/isuien-garden.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/Isuien+Garden/@34.685561,135.8350219,17z/">Link</a></p>', {minWidth:180}).addTo(map);
+    var sn = L.marker([34.6852295, 135.8368676], {icon: play}).bindPopup('<p>Yoshikien 吉城園</p><p><img src="https://photos.smugmug.com/Nara/Things-To-See-And-Do-In-Nara/i-3cQbQVb/0/M/yoshiki-en-garden-nara-damien-douxchamps-0043053-M.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/吉城園/@34.6852339,135.8346789,17z/">Link</a></p>', {minWidth:180}).addTo(map);
+    var sn = L.marker([34.682866, 135.832261], {icon: play}).bindPopup('<p>Kofuku-ji 興福寺</p><p><img src="http://www.japanvisitor.com/images/content_images/kofukuji-400.jpg" height="100" weight="180"></p><p><a href="https://www.google.com/maps/place/Kōfuku-ji/@34.684516,135.8284418,16z/">Link</a></p>', {minWidth:180}).addTo(map);
+    var sn = L.marker([34.6813804, 135.8483856], {icon: play}).bindPopup('<p>Kasuga-taisha 春日大社</p><p><img src="https://d233tsjqri9sf7.cloudfront.net/files/kanko/1792/1792--a6414008f15597b8c8498cc8797b14e7.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/Kasuga-taisha/@34.6823332,135.8335798,15z/">Link</a></p>', {minWidth:180}).addTo(map);
+    var sn = L.marker([34.6836091, 135.8366504], {icon: play}).bindPopup('<p>Nara National Museum 奈良国立博物馆</p><p><img src="https://images.japan-experience.com/guide-japon/1409/s380x280/nara-musee-national-de-nara-1.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/Japan,+〒630-8213+Nara-ken,+Nara-shi,+Noboriōjichō,+奈良国立博物館/@34.6836667,135.8345393,17z/">Link</a></p>', {minWidth:180}).addTo(map);
+    var sn = L.marker([34.689277, 135.84428], {icon: play}).bindPopup('<p>Nigatsu-do 二月堂</p><p><img src="http://www.japanvisitor.com/images/content_images/todaiji-904.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/東大寺+二月堂/@34.6892814,135.8420913,17z/">Link</a></p>', {minWidth:180}).addTo(map);
+
+    var sn = L.marker([34.6838058, 135.838999], {icon: food}).bindPopup('<p>ゐざさ Izasa Kakinoha-Zushi (Must Try)</p><p><img src="http://jpninfo.com/wp-content/uploads/2016/02/sushi-leaf.jpg" height="100" weight="180"></p><p><a href="https://www.google.com/maps/place/Izasa/@34.6838102,135.8368103,17z/">Link</a></p>', {minWidth:180}).addTo(map);
+
+    var sn = L.marker([34.6826291, 135.8284204], {icon: food}).bindPopup('<p>Aoniyoshi Ramen 元喜神 奈良店</p><p><img src="http://hiruhaku.com/wp1990/wp-content/uploads/2013/11/IMG_2818.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/元喜神+奈良店/@34.6826291,135.8284204,15z/">Link</a></p>', {minWidth:180}).addTo(map);
+
+    var sn = L.marker([34.684312, 135.836961], {icon: food}).bindPopup('<p>Kamameshi Shizuka 志津香 公園店</p><p><img src="http://cdn2.travel98.com/P/U/8280_d3636c0879e70f7fd5b44116db20d6dd_l.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/志津香+公園店+Kamameshi+Shizuka/@34.684312,135.8347723,17z/">Link</a></p>', {minWidth:180}).addTo(map);
+
+
+    var sn = L.marker([34.6808998, 135.8189408], {icon: train}).bindPopup('<p>JR Nara Station</p><p><img src="http://www.japanvisitor.com/images/content_images/nara-station-3.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/Nara+Station/@34.682486,135.8188568,16z/">Link</a></p>', {minWidth:180}).addTo(map);
+
+    var sn = L.marker([34.6842485, 135.8275275], {icon: train}).bindPopup('<p>Kintetsu-Nara Station</p><p><img src="http://www.japanvisitor.com/images/content_images/kintetsu-nara-1.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/Kintetsu-Nara+Station/@34.6842529,135.8253388,17z/">Link</a></p>', {minWidth:180}).addTo(map);
+
+    var sn = L.marker([34.6862792, 135.8258415], {icon: bike}).bindPopup('<p>Bicycle Rental</p><p><img src="http://www.wendyquah.com/wp-content/uploads/2017/03/wendy-quah-travel-blog-japan-nara-park-deers-3-1024x683.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.sg/maps/place/ヤマト観光レンタサイクル+近鉄奈良店+24時間返却可/@34.6856909,135.8249097,17z/">Link</a></p>', {minWidth:180}).addTo(map);
+
+
     var sn = L.marker([35.659798, 139.734033], {icon: play}).bindPopup('<p>Snoopy Museum</p><p><img src="http://dc-cdn.s3-ap-southeast-1.amazonaws.com/dc-Cover-2uibf5n76684t0415ej4r0g4b3-20160425185533.Medi.jpeg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Snoopy+Museum/@35.6547085,139.7369084,14z/data=!4m13!1m7!3m6!1s0x605d1b87f02e57e7:0x2e01618b22571b89!2sTokyo,+Japan!3b1!8m2!3d35.6894875!4d139.6917064!3m4!1s0x0:0x7c0f44073a3c60ce!8m2!3d35.6596673!4d139.7340345">Link</a></p>', {minWidth:180}).addTo(map);
-    var sn = L.marker([35.667657, 139.706501], {icon: play}).bindPopup('<p>Snoopy Shop Harajuku</p><p><img src="http://japan.com/wp-content/uploads/1-27-420x225.png" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Snoopy+Town/@35.66507,139.6966891,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzXCsDM5JzM1LjEiTiAxMznCsDQ0JzAyLjUiRQ!3b1!8m2!3d35.659752!4d139.73403!3m4!1s0x0:0xa1b7a4b7d8a0c1e8!8m2!3d35.6676562!4d139.7065043">Link</a></p>', {minWidth:180}).addTo(map);
     var sn = L.marker([35.648629, 139.694492], {icon: play}).bindPopup('<p>Snoopy Cafe Shibuya</p><p><img src="https://media.timeout.com/images/102886431/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/PEANUTS+Cafe+%2F+ピーナッツカフェ/@35.6503207,139.6906512,15z">Link</a></p>', {minWidth:180}).addTo(map);
     var eat = L.marker([35.671665, 139.761364], {icon: food}).bindPopup('<p>Sushi Ya (Aburi)</p><p><img src="https://res.cloudinary.com/hstcxjula/image/upload/b_black,c_pad,f_auto,fl_keep_iptc,h_387,w_580/v1470117606/zx57i2vwifeujavljur6.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Sushi+Ya/@35.6547085,139.7369084,14z/data=!4m13!1m7!3m6!1s0x605d1b87f02e57e7:0x2e01618b22571b89!2sTokyo,+Japan!3b1!8m2!3d35.6894875!4d139.6917064!3m4!1s0x0:0xf3fc4f649a52488d!8m2!3d35.6716655!4d139.7611946">Link</a></p>', {minWidth:150}).addTo(map);
     var eat = L.marker([35.688183, 139.711506], {icon: food}).bindPopup('<p>Hakata Issuitei (Ramen)</p><p><img src="https://media.timeout.com/images/103662200/630/472/image.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/%E5%8D%9A%E5%A4%9A%E4%B8%80%E7%91%9E%E4%BA%AD+HAKATA+ISSUITEI/@35.6875029,139.701807,15z/data=!4m13!1m7!3m6!1s0x0:0x0!2zMzXCsDM5JzM1LjEiTiAxMznCsDQ0JzAyLjUiRQ!3b1!8m2!3d35.659752!4d139.73403!3m4!1s0x0:0xfd25b36bcbf8f47e!8m2!3d35.6883045!4d139.7114584">Link</a></p>', {minWidth:150}).addTo(map);
@@ -132,7 +170,6 @@
     var pl = L.marker([35.671583, 139.703147], {icon: play}).bindPopup('<p>Takeshita Street Market</p><p><img src="https://traveldreamscapes.files.wordpress.com/2014/09/60213539.jpg" height="100" weight="180"></p><p><a href="https://www.google.com.jm/maps/place/Takeshita+Street/@35.6715702,139.7009529,17z/">Link</a></p>', {minWidth:150}).addTo(map);
 
     var pl = L.marker([35.658572, 139.745444], {icon: play}).bindPopup('<p>Tokyo Tower</p><p><img src="https://cache-graphicslib.viator.com/graphicslib/page-images/360x240/134432_Tokyo_TokyoTower_230.jpg" height="100" weight="180"></p><p><a href="https://www.google.co.uk/maps/place/Tokyo+Tower/@35.6585848,139.7432389,17z/">Link</a></p>', {minWidth:150}).addTo(map);
-
 
     </script>
 </body>
